@@ -562,7 +562,7 @@ const engineData = [
         year: null,
         group: "No Gr",
         manufacturer: "Subaru",
-        image: "Image/66__Subaru_BRZ_Drift_Car_.JPG.jpg"
+        image: "Image/66__Subaru_BRZ_Drift_Car_.jpg"
       }
     ]
   },

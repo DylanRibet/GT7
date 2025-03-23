@@ -563,7 +563,7 @@ const engineData = [
         year: null,
         group: "No Gr",
         manufacturer: "Subaru",
-        image: "Image/66__Subaru_BRZ_Drift_Car_.JPG.jpg"
+        image: "Image/66__Subaru_BRZ_Drift_Car_.jpg"
       }
     ]
   },
@@ -1349,7 +1349,7 @@ const engineData = [
         year: 1991,
         group: "No Gr",
         manufacturer: "Mitsubishi",
-        image: "Image/158__Mitsubishi_GTO_Twin_Turbo_'91_.jpg"
+        image: "Image/158__Mitsubishi_GTO_Twin_Turbo_'91.jpg"
       },
       {
         name: "Mitsubishi Lancer Evolution X Final '15",
