@@ -3,20 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recherche de Moteurs et Véhicules Compatibles</title>
+  <title>Gran Turismo 7 - Compatibilité Moteurs et Véhicules</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Recherche de Moteurs et Véhicules Compatibles</h1>
-    <input
-      type="text"
-      id="searchInput"
-      placeholder="Rechercher un moteur ou un véhicule..."
-      autocomplete="off"
-    />
-    <div id="results"></div>
+  <!-- Popup de sélection de langue -->
+  <div id="languagePopup" class="language-popup">
+    <div class="language-popup-content">
+      <h3>Choisissez votre langue / Select your language</h3>
+      <div class="language-options">
+        <div class="language-option" data-lang="fr">
+          <img src="https://flagcdn.com/w20/fr.png" alt="Français">
+          <span>Français</span>
+        </div>
+        <div class="language-option" data-lang="en">
+          <img src="https://flagcdn.com/w20/gb.png" alt="English">
+          <span>English</span>
+        </div>
+        <div class="language-option" data-lang="es">
+          <img src="https://flagcdn.com/w20/es.png" alt="Español">
+          <span>Español</span>
+        </div>
+        <div class="language-option" data-lang="de">
+          <img src="https://flagcdn.com/w20/de.png" alt="Deutsch">
+          <span>Deutsch</span>
+        </div>
+        <div class="language-option" data-lang="pt">
+          <img src="https://flagcdn.com/w20/pt.png" alt="Português">
+          <span>Português</span>
+        </div>
+        <div class="language-option" data-lang="zh">
+          <img src="https://flagcdn.com/w20/cn.png" alt="中文">
+          <span>中文</span>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <header>
+    <div class="header-content">
+      <h1>Gran Turismo 7 - Compatibilité Moteurs et Véhicules</h1>
+      <p>Découvrez quels véhicules sont compatibles avec quels moteurs pour vos swaps dans Gran Turismo 7.</p>
+      <button id="toggleView" class="toggle-btn">RECHERCHE</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Page de liste des moteurs (visible par défaut) -->
+    <div id="listPage">
+      <h2 class="list-title">Liste des moteurs compatibles</h2>
+      <div id="engineList"></div>
+    </div>
+
+    <!-- Page de recherche (masquée par défaut) -->
+    <div id="searchPage" class="hidden">
+      <div class="search-section">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Rechercher un moteur ou un véhicule..."
+          autocomplete="off"
+        />
+        <i class="fas fa-search search-icon"></i>
+      </div>
+      <div id="results"></div>
+    </div>
+  </div>
+
+  <!-- Pop-up (Modal) -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <img id="modal-image" src="" alt="Image du véhicule" class="modal-image">
+      <h2 id="modal-title"></h2>
+      <div class="modal-details">
+        <p id="modal-engine"></p>
+        <p id="modal-group"></p>
+        <p id="modal-year"></p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+  <p>© 2025 Dylan Roca - Compatibilité Moteurs et Véhicules. Tous droits réservés.</p>
+</footer>
 
   <script src="script.js"></script>
 </body>
